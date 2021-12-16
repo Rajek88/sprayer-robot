@@ -1,0 +1,20 @@
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.App {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: blueviolet;
+  color: white;
+}

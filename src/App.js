@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { ref, set } from "firebase/database";
+import { database } from "./config";
 
 function App() {
+  const enablePump = async () => {
+    await set(ref(database, "cmd/"), {
+      cmd: "true",
+    });
+    setTimeout(() => {
+      console.log("Now Disabling the pump and moving on");
+      disablePump();
+    }, 3000);
+    return;
+  };
+  const disablePump = async () => {
+    await set(ref(database, "cmd/"), {
+      cmd: "false",
+    });
+    return;
+  };
+  const spray = async () => {
+    await enablePump();
+    await disablePump();
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={spray}>Spray</button>
     </div>
   );
 }
