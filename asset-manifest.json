@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sprayer/static/css/main.09ab64aa.css",
+    "main.js": "/sprayer/static/js/main.758e0bf9.js",
+    "index.html": "/sprayer/index.html",
+    "main.09ab64aa.css.map": "/sprayer/static/css/main.09ab64aa.css.map",
+    "main.758e0bf9.js.map": "/sprayer/static/js/main.758e0bf9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09ab64aa.css",
+    "static/js/main.758e0bf9.js"
+  ]
+}
