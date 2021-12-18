@@ -7,7 +7,9 @@ function App() {
       cmd: "true",
     });
     // to execute a funtion after a delay dont pass the () with function name
-    setTimeout(disablePump, 3000);
+    setTimeout(() => {
+      disablePump();
+    }, 3000);
     return;
   };
   const disablePump = async () => {
