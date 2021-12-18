@@ -9,7 +9,7 @@ function App() {
     // to execute a funtion after a delay dont pass the () with function name
     setTimeout(() => {
       disablePump();
-    }, 3000);
+    }, 3500);
     return;
   };
   const disablePump = async () => {
