@@ -6,13 +6,12 @@ function App() {
     await set(ref(database, "cmd/"), {
       cmd: "true",
     });
-    setTimeout(() => {
-      console.log("Now Disabling the pump and moving on");
-      disablePump();
-    }, 3000);
+    // to execute a funtion after a delay dont pass the () with function name
+    setTimeout(disablePump, 3000);
     return;
   };
   const disablePump = async () => {
+    console.log("Now Disabling the pump and moving on");
     await set(ref(database, "cmd/"), {
       cmd: "false",
     });
