@@ -20,7 +20,6 @@ function App() {
   };
   const spray = async () => {
     await enablePump();
-    await disablePump();
   };
   return (
     <div className="App">
